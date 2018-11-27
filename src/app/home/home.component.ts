@@ -10,9 +10,9 @@ export class HomeComponent implements OnInit {
   constructor(private ser:BlogService){}
 
   ngOnInit() {
-    this.getPosts()
+    this.getPosts();
   }
   getPosts(){
-    this.posts = this.ser.getposts()
+    this.ser.getposts('all').subscribe(data => console.log(this.posts = data));
   }
 }

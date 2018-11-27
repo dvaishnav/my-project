@@ -10,9 +10,14 @@ export class BlogService {
   root_url = 'http://localhost:4200/';
   constructor(private http:Http) { }
 
-  getposts(){
+  getposts(url){
+    return this.http.get('http://localhost/api/blog/get_blog.php?url='+url).
+    map(response => response.json());
+  }
+
+  getHomeData(){
     return this.http.get('http://localhost/api/blog/get_blog.php').
-    map((response) ⇒ response.json());
+    map(response => response.json());
   }
 
 }

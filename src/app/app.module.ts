@@ -9,6 +9,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { PostComponent } from './post/post.component';
 import { ProfileComponent } from './profile/profile.component';
 import { CategoryComponent } from './category/category.component';
+import { ReplacePipe } from './replace.pipe';
 var route = [
   { 
     path: '',
@@ -43,7 +44,8 @@ var route = [
     AboutUsComponent,
     PostComponent,
     ProfileComponent,
-    CategoryComponent
+    CategoryComponent,
+    ReplacePipe
   ],
   imports: [
     BrowserModule,
