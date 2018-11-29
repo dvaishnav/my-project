@@ -10,6 +10,7 @@ import { PostComponent } from './post/post.component';
 import { ProfileComponent } from './profile/profile.component';
 import { CategoryComponent } from './category/category.component';
 import { ReplacePipe } from './replace.pipe';
+import { SearchReasultComponent } from './search-reasult/search-reasult.component';
 var route = [
   { 
     path: '',
@@ -45,7 +46,8 @@ var route = [
     PostComponent,
     ProfileComponent,
     CategoryComponent,
-    ReplacePipe
+    ReplacePipe,
+    SearchReasultComponent
   ],
   imports: [
     BrowserModule,
