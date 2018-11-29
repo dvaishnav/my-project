@@ -12,7 +12,7 @@
   </div>
   <div class="card-footer text-muted">
     Posted on {{post.created | date}} by
-    <a routerLink="profile/{{post.name|replace:' ':'-'}}">{{post.name}}</a>
+    <a routerLink="profile/{{post.name | replace:' ':'-' | lowercase}}">{{post.name}}</a>
   </div>
 </div>
 
