@@ -6,7 +6,7 @@
   <!-- Author -->
   <p class="lead">
     by
-    <a routerLink="../../profile/{{post1['0'].name | replace:' ':'-'}}">{{post1['0'].name}}</a>
+    <a routerLink="../../profile/{{post1['0'].name | replace:' ':'-' | lowercase}}">{{post1['0'].name}}</a>
   </p>
 
   <hr>
