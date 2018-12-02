@@ -21,6 +21,6 @@ export class BlogService {
   }
 
   addComment(data){
-      return data;
+      return this.http.post('http://localhost/api/blog/add_comment.php',data);
   }
 }
