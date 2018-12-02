@@ -20,4 +20,7 @@ export class BlogService {
     map(response => response.json());
   }
 
+  addComment(data){
+      return data;
+  }
 }
