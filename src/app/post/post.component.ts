@@ -9,7 +9,7 @@ import { FormGroup,FormControl,Validators } from '@angular/forms'
 })
 export class PostComponent implements OnInit {
   public id: string;
-  root_url; post1={0:{id:'',name:''},comment:{}};
+  root_url; post1={0:{id:'',post_id:'',name:''},comment:{}};
   comments;
   comentData;
   constructor(private ser:BlogService,private route: ActivatedRoute){ }
@@ -35,7 +35,6 @@ export class PostComponent implements OnInit {
       console.log(this.comments);
       this.comentData.reset();
       this.ser.addComment(Object.assign(data,{post_id:this.post1[0].post_id})).subscribe();
-
     }else console.log('invalid data');
   }
 
