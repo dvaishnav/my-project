@@ -13,6 +13,6 @@ export class HomeComponent implements OnInit {
     this.getPosts();
   }
   getPosts(){
-    this.ser.getposts('all').subscribe(data => console.log(this.posts = data));
+    this.ser.getposts('all').subscribe(data =>(this.posts = data));
   }
 }

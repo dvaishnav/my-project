@@ -24,4 +24,14 @@ export class BlogService {
     if(!data.name)return;
     return this.http.post('http://localhost/api/blog/add_comment.php',data);
   }
+
+  getSetting(){
+    return this.http.get('http://localhost/api/blog/get_setting.php').
+    map(response => response.json());
+  }
+
+  getSearchResult(data){
+    return this.http.post('http://localhost/api/blog/get_search.php',data);
+  }
+
 }
