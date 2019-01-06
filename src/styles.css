@@ -4,6 +4,17 @@
     padding: 5px;
     font-size: 14px;
     cursor: pointer;
+    display: block;
+    /* border: violet; */
+    border: 1px solid #e4dede;
+    border-radius: 5px;
+    margin-bottom: 1px;
+}
+
+.search-suggetion:hover {
+    color: #616767;
+    text-decoration: none;
+    background-color: #f7f7f7;
 }
 .ng-touched.ng-invalid {
     border-color: #dc3545;

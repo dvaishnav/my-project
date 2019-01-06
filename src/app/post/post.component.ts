@@ -14,12 +14,18 @@ export class PostComponent implements OnInit {
   comentData;
   constructor(private ser:BlogService,private route: ActivatedRoute){ }
 
-  ngOnInit() {
+  ngOnInit(){
     this.comentData = new FormGroup({
       name: new FormControl('',Validators.compose([Validators.required])),
       //emailid : new FormControl(''),
       comment: new FormControl('',Validators.compose([Validators.required])),
     });
+    this.root_url = this.ser.root_url;
+    this.id = this.route.snapshot.paramMap.get('id');
+    console.log(this.id);
+    this.ser.getposts(this.id).subscribe(data=>(this.post1 = data, this.comments = data.comment.reverse()));
+  }
+  getBlogData(){
     this.root_url = this.ser.root_url;
     this.id = this.route.snapshot.paramMap.get('id');
     this.ser.getposts(this.id).subscribe(data=>(this.post1 = data, this.comments = data.comment.reverse()));

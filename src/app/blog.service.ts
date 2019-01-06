@@ -31,7 +31,8 @@ export class BlogService {
   }
 
   getSearchResult(data){
-    return this.http.post('http://localhost/api/blog/get_search.php',data);
+    return this.http.get('http://localhost/api/blog/get_search.php?q='+data).
+    map(response => response.json());
   }
 
 }
