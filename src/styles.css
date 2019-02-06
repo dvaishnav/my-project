@@ -1,6 +1,6 @@
 .search-suggetion{
     color: #616767;
-    background-color: #fbfbfb;
+    background-color: #ffffff;
     padding: 5px;
     font-size: 14px;
     cursor: pointer;
@@ -8,9 +8,14 @@
     /* border: violet; */
     border: 1px solid #e4dede;
     border-radius: 5px;
-    margin-bottom: 1px;
+    margin: 1px;
 }
-
+.suggetion{
+    position: absolute;
+    z-index: 99;
+    width: 74%;
+    background-color: #f7f7f7;
+}
 .search-suggetion:hover {
     color: #616767;
     text-decoration: none;
